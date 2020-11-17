@@ -1,17 +1,11 @@
 import React from "react";
-import { NoteBox } from "./components/molecules";
-import { Header } from "./components/organisms";
-import { MainWrapper } from "./components/templates/";
 import { GlobalStyle } from "./globalStyle";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export function App() {
   return (
-    <>
+    <Router>
       <GlobalStyle />
-      <Header />
-      <MainWrapper>
-        <NoteBox title='test' note='test' />
-      </MainWrapper>
-    </>
+    </Router>
   );
 }

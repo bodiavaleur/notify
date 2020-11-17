@@ -1,1 +1,1 @@
-export { MainWrapper } from "./MainWrapper";
+export { MainTemplate } from "./MainTemplate";

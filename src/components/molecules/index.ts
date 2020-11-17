@@ -1,1 +1,2 @@
-export { NoteBox } from "./NoteBox";
+export { Header } from "./Header";
+export { Note } from "./Note";
