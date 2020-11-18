@@ -1,4 +1,5 @@
 import React from "react";
+import { NoteType } from "../../types/NoteTypes";
 import { Text, Time, Title } from "../../ui/atoms";
 import {
   PreviewBlock,
@@ -7,17 +8,19 @@ import {
   PreviewBlockTitle,
 } from "../../ui/molecules";
 
-export function Note() {
+export function Note({ title, text, id }: NoteType) {
+  // Format note id to human-readable string (ex. 18/11/2020)
+  const formatTime = new Date(id).toLocaleString().split(",")[0];
   return (
     <PreviewBlock>
       <PreviewBlockTitle>
-        <Title>Grocery list</Title>
+        <Title>{title}</Title>
       </PreviewBlockTitle>
       <PreviewBlockTime>
-        <Time>12:23</Time>
+        <Time>{formatTime}</Time>
       </PreviewBlockTime>
       <PreviewBlockText>
-        <Text>blah blah blah blah</Text>
+        <Text>{text}</Text>
       </PreviewBlockText>
     </PreviewBlock>
   );
