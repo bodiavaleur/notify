@@ -5,7 +5,7 @@ export const PreviewBlock = styled.li`
   width: 100%;
   height: 3.75rem;
   max-width: 768px;
-  grid-template-columns: 3rem auto;
+  grid-template-columns: 5rem auto;
   grid-template-rows: 1.5rem auto;
   align-items: center;
   margin: 0.5rem 0;
