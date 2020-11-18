@@ -2,10 +2,15 @@ import React from "react";
 import { ContentWrapper } from "../../ui/templates";
 import { Header } from "../molecules";
 
-export function MainTemplate() {
+interface MainTemplateProps {
+  children: React.ReactNode;
+}
+
+export function MainTemplate({ children }: MainTemplateProps) {
   return (
     <ContentWrapper>
       <Header />
+      {children}
     </ContentWrapper>
   );
 }
