@@ -11,3 +11,9 @@ export interface NoteType {
 export interface NotesCollection {
   notes: NoteType[];
 }
+
+export interface NotesState {
+  searchQuery: string;
+  notes: NoteType[];
+  selectedNoteIdx: number;
+}
