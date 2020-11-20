@@ -5,3 +5,4 @@ export {
   PreviewBlockText,
 } from "./PreviewBlock";
 export { PageHeader } from "./PageHeader";
+export { PanelBlock } from "./PanelBlock";
