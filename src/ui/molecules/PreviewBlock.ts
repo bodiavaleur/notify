@@ -10,6 +10,8 @@ export const PreviewBlock = styled.li`
   align-items: center;
   margin: 0.5rem 0;
   padding: 0.4rem;
+  text-decoration: none;
+  user-select: none;
   border-radius: 0.5rem;
   background: var(--gray);
 `;

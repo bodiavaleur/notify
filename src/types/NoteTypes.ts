@@ -15,5 +15,6 @@ export interface NotesCollection {
 export interface NotesState {
   searchQuery: string;
   notes: NoteType[];
-  selectedNoteIdx: number;
+  selectedNote: NoteType;
+  showNoteEdit: boolean;
 }

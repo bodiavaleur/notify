@@ -3,26 +3,12 @@ import {
   ADD_NOTE,
   DELETE_NOTE,
   NotesActionTypes,
+  SAVE_NOTE,
   SET_NOTES,
-  SET_NOTE_TEXT,
   SET_SEARCH_QUERY,
   SET_SELECTED_NOTE,
-  SET_TITLE,
+  TOGGLE_SHOW_EDIT,
 } from "./actionTypes";
-
-export function setTitle(title: NoteTitle): NotesActionTypes {
-  return {
-    type: SET_TITLE,
-    title,
-  };
-}
-
-export function setNoteText(text: NoteText): NotesActionTypes {
-  return {
-    type: SET_NOTE_TEXT,
-    text,
-  };
-}
 
 export function setSearchQuery(query: string): NotesActionTypes {
   return {
@@ -31,10 +17,10 @@ export function setSearchQuery(query: string): NotesActionTypes {
   };
 }
 
-export function setSelectedNote(noteIdx: number): NotesActionTypes {
+export function setSelectedNote(note: NoteType): NotesActionTypes {
   return {
     type: SET_SELECTED_NOTE,
-    noteIdx,
+    note,
   };
 }
 
@@ -45,10 +31,10 @@ export function setNotes(notes: NoteType[]): NotesActionTypes {
   };
 }
 
-export function addNote(note: NoteType): NotesActionTypes {
+export function addNote(): NotesActionTypes {
   return {
     type: ADD_NOTE,
-    note,
+    note: { title: "", text: "", id: +new Date() },
   };
 }
 
@@ -56,5 +42,18 @@ export function deleteNote(id: NoteId): NotesActionTypes {
   return {
     type: DELETE_NOTE,
     id,
+  };
+}
+
+export function saveNote(note: NoteType): NotesActionTypes {
+  return {
+    type: SAVE_NOTE,
+    note,
+  };
+}
+
+export function toggleShowEdit(): NotesActionTypes {
+  return {
+    type: TOGGLE_SHOW_EDIT,
   };
 }

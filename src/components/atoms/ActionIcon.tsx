@@ -1,10 +1,11 @@
 import React from "react";
-import { Icon } from "../../ui/atoms";
+import { ButtonIcon } from "../../ui/atoms";
 
 interface ActionIconProps {
+  click: React.MouseEventHandler<HTMLButtonElement>;
   icon: React.ReactNode;
 }
 
-export function ActionIcon({ icon }: ActionIconProps) {
-  return <Icon>{icon}</Icon>;
+export function ActionIcon({ click, icon }: ActionIconProps) {
+  return <ButtonIcon onClick={click}>{icon}</ButtonIcon>;
 }

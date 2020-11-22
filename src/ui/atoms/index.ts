@@ -1,3 +1,3 @@
 export { SearchInput, TitleInput, Textarea } from "./Inputs";
-export { Icon } from "./Icon";
+export { ButtonIcon, ButtonText } from "./Buttons";
 export { TopTitle, Title, Text, Time } from "./Typography";
